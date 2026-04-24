@@ -14,7 +14,7 @@ analyses live weather, curates personalised recommendations, and evaluates its o
 
 ## 🚀 Live Demo
 
-**Deployed URL:** [your-app-url-here.streamlit.app](https://your-app.streamlit.app)
+**Deployed URL:** https://city-event-aggregator.up.railway.app/
 
 ---
 
@@ -146,5 +146,5 @@ city-event-aggregator/
 
 ## 👥 Team
 
-- **Role A (Architect):** [Your Name]
-- **Role B (Builder):** [Partner Name]
+- **Role A (Architect):** Anvay Khobragade
+- **Role B (Builder):** Ankush Sharan
