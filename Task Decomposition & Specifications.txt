@@ -1,0 +1,87 @@
+Task Decomposition & Specifications
+
+Event Discovery Agent (event_discovery_agent)
+
+Input: City name ,Event category keywords
+
+Output: List of raw events (title, date, venue, source URL)
+
+Tools: Tavily Search Tool
+
+Decision Rule: If < 3 results → fallback to DuckDuckGo
+
+Steps:
+
+Parse city and category from query
+Create search queries
+Call Tavily (top 10 results)
+Fallback to DuckDuckGo if needed
+Return structured list
+
+Event Curation Agent (curator_agent)
+
+Input: Raw event list
+
+Output: Clean, deduplicated events
+
+Tools: None (LLM only)
+
+Steps:
+
+Remove duplicates
+Filter by date
+Normalize date/time
+Enrich missing data
+Return clean list
+
+Weather Agent (weather_agent)
+
+Input: City ,Event dates
+
+Output: Weather data: {date: condition, temp, rain_prob}
+
+Tools: OpenWeatherMap API
+
+Decision Rule: Rain > 40% → mark event as risky
+
+Steps:
+
+Extract city + dates
+Fetch 5-day forecast
+Parse weather info
+Tag risky events
+Return weather data
+
+Recommendation Agent (recommendation_agent)
+
+Input: Curated events, Weather data, User preferences
+
+Output:  Top 5 ranked events with reasoning
+
+Tools: None
+
+Ranking Formula: Score = Interest Match + Weather Score + Recency
+
+Steps:
+
+Score interest relevance
+Apply weather penalty
+Apply recency boost
+Select top 5
+Generate explanations
+
+Judge Agent (judge_agent)
+
+Input: Final recommendations
+
+Output: Score (0–10) + feedback
+
+Decision Rule: Score < 6 → retry recommendation
+
+Steps:
+
+Evaluate output
+Score across rubric
+Provide feedback
+Trigger retry if needed
+Approve final output

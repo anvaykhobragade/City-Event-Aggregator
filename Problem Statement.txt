@@ -1,0 +1,32 @@
+Problem Statement
+
+Who?
+The Target User
+Urban residents, college students, young professionals, and tourists who want to stay informed about local events — concerts, exhibitions, food festivals, sports, and cultural gatherings — happening in their city without manually searching across multiple platforms.
+
+What
+
+The Problem
+Discovering relevant, up-to-date local events is fragmented. Users must check multiple sources like news portals, event platforms, social media, and venue websites.
+There is no single intelligent interface that:
+Aggregates
+Filters
+Contextualises
+Recommends events based on:
+User interests
+Free time
+Weather conditions
+
+Why Agentic?
+
+Why an AI Agent is the Right Approach
+The system requires:
+
+Multi-step reasoning
+Real-time data retrieval (search + weather)
+Dynamic decision-making
+Result ranking and filtering
+Autonomous evaluation
+
+A single LLM prompt cannot handle this.
+Hence, a multi-agent architecture is used.
