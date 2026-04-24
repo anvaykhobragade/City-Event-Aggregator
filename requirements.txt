@@ -1,0 +1,16 @@
+# requirements.txt — City Event Aggregator
+# Install: pip install -r requirements.txt
+
+# Core
+streamlit>=1.32.0
+python-dotenv>=1.0.0
+
+# LLM — Groq (free tier)
+groq>=0.5.0
+
+# Search
+tavily-python>=0.3.0
+ddgs>=9.0.0
+
+# Weather
+requests>=2.31.0
